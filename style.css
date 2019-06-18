@@ -15,7 +15,7 @@ body {
 
 header {
   background: #ed6a5a;
-  padding: 30px;
+  padding: 20px;
 }
 
 header h1 {
@@ -26,52 +26,12 @@ header h1 {
   word-spacing: 25px;
 }
 
-.scoreboard {
-  color: #ed6a5a;
-  padding: 15px 20px;
-  width: 200px;
-  margin: auto;
-  margin-top: 30px;
-  border: 3px solid #5ca4a9;
-  border-radius: 5px;
+.userChoices {
   text-align: center;
-  font-size: 40px;
-  position: relative;
-}
-
-.badge {
-  background-color: #9bc1bc;
-  color: #e6ebe0;
-  font-size: 16px;
-  padding: 2px 5px;
-}
-
-#user-label {
-  position: absolute;
-  top: 30px;
-  left: -13px;
-}
-
-#computer-label {
-  position: absolute;
-  top: 30px;
-  right: -35px;
-}
-
-.result {
-  margin-top: 20px;
-  text-align: center;
-  color: #5ca4a9;
-  font-size: 30px;
-}
-
-.choices {
-  text-align: center;
-  margin: 20px;
   padding: 10px;
 }
 
-.choice {
+.userChoice {
   display: inline-block;
   margin: 10px;
   padding: 15px;
@@ -81,15 +41,48 @@ header h1 {
   border-radius: 50%;
 }
 
-.choice:hover {
+.userChoice:hover {
   background-color: #5ca4a9;
   opacity: 0.8;
 }
 
-#action-message {
+.computerChoices {
+  text-align: center;
+  padding: 10px;
+}
+
+.computerChoice {
+  text-align: center;
+  display: inline-block;
+  padding: 15px;
+  font-size: 50px;
+  color: #ed6a5a;
+  border: 4px solid #ed6a5a;
+  border-radius: 10px;
+}
+
+.computerChoice:hover {
+  background-color: #5ca4a9;
+  opacity: 0.8;
+}
+
+.action-message {
   color: #5ca4a9;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  background-color: #5ca4a9;
+  text-align: center;
+  color: #5ca4a9;
+  font-size: 30px;
+}
+
+.result p {
+  color: #e6ebe0;
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

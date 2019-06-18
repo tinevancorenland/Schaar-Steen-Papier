@@ -32,7 +32,7 @@ body {
 
 header {
   background: $coral;
-  padding: 30px;
+  padding: 20px;
   h1 {
     font-family: $playfair;
     font-size: 40px;
@@ -42,52 +42,44 @@ header {
   }
 }
 
-.scoreboard {
-  color: $coral;
-  padding: 15px 20px;
-  width: 200px;
-  margin: auto;
-  margin-top: 30px;
-  border: 3px solid $brightBlue;
-  border-radius: 5px;
+// .scoreboard {
+//   color: $coral;
+//   padding: 15px 20px;
+//   width: 200px;
+//   margin: auto;
+//   margin-top: 30px;
+//   border: 3px solid $brightBlue;
+//   border-radius: 5px;
+//   text-align: center;
+//   font-size: 40px;
+//   position: relative;
+// }
+
+// .badge {
+//   background-color: $lightBlue;
+//   color: $light;
+//   font-size: 16px;
+//   padding: 2px 5px;
+// }
+
+// #user-label {
+//   position: absolute;
+//   top: 30px;
+//   left: -13px;
+// }
+
+// #computer-label {
+//   position: absolute;
+//   top: 30px;
+//   right: -35px;
+// }
+
+.userChoices {
   text-align: center;
-  font-size: 40px;
-  position: relative;
-}
-
-.badge {
-  background-color: $lightBlue;
-  color: $light;
-  font-size: 16px;
-  padding: 2px 5px;
-}
-
-#user-label {
-  position: absolute;
-  top: 30px;
-  left: -13px;
-}
-
-#computer-label {
-  position: absolute;
-  top: 30px;
-  right: -35px;
-}
-
-.result {
-  margin-top: 20px;
-  text-align: center;
-  color: $brightBlue;
-  font-size: 30px;
-}
-
-.choices {
-  text-align: center;
-  margin: 20px;
   padding: 10px;
 }
 
-.choice {
+.userChoice {
   display: inline-block;
   margin: 10px;
   padding: 15px;
@@ -101,9 +93,40 @@ header {
   }
 }
 
-#action-message {
+.computerChoices {
+  text-align: center;
+  padding: 10px;
+}
+
+.computerChoice {
+  text-align: center;
+  display: inline-block;
+  padding: 15px;
+  font-size: 50px;
+  color: $coral;
+  border: 4px solid $coral;
+  border-radius: 10px;
+  &:hover {
+    background-color: $brightBlue;
+    opacity: 0.8;
+  }
+}
+
+.action-message {
   color: $brightBlue;
   font-size: 30px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  background-color: $brightBlue;
+  text-align: center;
+  color: $brightBlue;
+  font-size: 30px;
+  p {
+    color: $light;
+    padding: 10px;
+  }
 }

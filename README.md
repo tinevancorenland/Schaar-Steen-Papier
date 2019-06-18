@@ -8,7 +8,8 @@
 
 - Why?
 
-Because Filip wants us to have fun while learning. Whether we want to or not.
+Because Filip wants us to have fun while learning. <br>
+Whether we want to or not. <br>
 **LEARNING CODE IS FUN I TELL YA.**
 
 - When?
