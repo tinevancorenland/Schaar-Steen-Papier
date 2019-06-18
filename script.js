@@ -58,6 +58,7 @@ function playScissors() {
 play.addEventListener("click", playPlay);
 
 function playPlay() {
+  play.style.fontSize = "50px";
   if (userChoice === "rock") {
     //Gebruiker koos steen in stap 1
     console.log(computerChoice);
