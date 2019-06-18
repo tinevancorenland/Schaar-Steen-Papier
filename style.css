@@ -79,6 +79,7 @@ header h1 {
 
 .result {
   margin-top: 20px;
+  padding-bottom: 10px;
   background-color: #5ca4a9;
   text-align: center;
   color: #5ca4a9;
@@ -91,6 +92,8 @@ header h1 {
 }
 
 #reset {
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   color: #e6ebe0;
