@@ -89,4 +89,21 @@ header h1 {
   color: #e6ebe0;
   padding: 10px;
 }
+
+#reset {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: #e6ebe0;
+  background-color: #5ca4a9;
+  padding: 3px;
+  border: 3px solid #e6ebe0;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+#reset:hover {
+  border: 3px solid #ed6a5a;
+  color: #ed6a5a;
+}
 /*# sourceMappingURL=style.css.map */

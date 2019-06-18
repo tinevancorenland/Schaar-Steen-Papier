@@ -1,3 +1,10 @@
+// Bij het laden zijn keuzes gebruiker niet zichtbaar
+
+// document.body.addEventListener("load", hideChoice);
+// function hideChoice() {
+//   rock.style.display = "none";
+// }
+
 // Keuze gebruiker
 var rock = document.getElementById("rock");
 var paper = document.getElementById("paper");
@@ -21,6 +28,7 @@ function playRock() {
   userChoice = "rock";
   awareChoice.innerHTML = "You're a rock";
   console.log(userChoice);
+  rock.style.fontSize = "50px";
 }
 
 // Gebruiker kiest papier door klik
@@ -31,6 +39,7 @@ function playPaper() {
   userChoice = "paper";
   awareChoice.innerHTML = "You're paper";
   console.log(userChoice);
+  paper.style.fontSize = "50px";
 }
 
 // Gebruiker kiest schaar door klik
@@ -41,6 +50,7 @@ function playScissors() {
   userChoice = "scissors";
   awareChoice.innerHTML = "You're scissors";
   console.log(userChoice);
+  scissors.style.fontSize = "50px";
 }
 
 // Computer playt
@@ -102,4 +112,13 @@ function messageScissors() {
       "Scissor scissor on the wall, who is the biggest loser of them all? We both are.";
     randomChoice.innerHTML = "I am scissors";
   }
+}
+
+//Reset button
+
+var reset = document.getElementById("reset");
+reset.addEventListener("click", reload);
+
+function reload() {
+  location.reload();
 }

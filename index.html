@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/3502d9b2fa.js"></script>
     <title>Schaar Steen Papier</title>
   </head>
-  <body>
+  <body onload="hideChoice()">
     <header>
       <h1>Rock - Paper - Scissors</h1>
     </header>
@@ -41,6 +41,7 @@
 
     <div class="result">
       <p id="winner">And the winner is...</p>
+      <input id="reset" type="reset" value="Try again" />
     </div>
 
     <script src="script.js"></script>
