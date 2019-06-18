@@ -17,7 +17,7 @@ $light: rgba(230, 235, 224, 1);
 @import url("https://fonts.googleapis.com/css?family=Oswald|Playfair+Display&display=swap");
 
 $oswald: "Oswald", sans-serif;
-$playfair: "Playfair Display", serif;
+$playfair: "Playfair Display", serif; //Best font for a game, right?
 
 * {
   margin: 0;
@@ -32,47 +32,16 @@ body {
 
 header {
   background: $coral;
-  padding: 20px;
+  padding: 10px;
   h1 {
-    font-family: $playfair;
-    font-size: 40px;
+    font-family: $oswald;
+    font-size: 25px;
     color: $light;
     text-align: center;
     word-spacing: 25px;
+    letter-spacing: 2px;
   }
 }
-
-// .scoreboard {
-//   color: $coral;
-//   padding: 15px 20px;
-//   width: 200px;
-//   margin: auto;
-//   margin-top: 30px;
-//   border: 3px solid $brightBlue;
-//   border-radius: 5px;
-//   text-align: center;
-//   font-size: 40px;
-//   position: relative;
-// }
-
-// .badge {
-//   background-color: $lightBlue;
-//   color: $light;
-//   font-size: 16px;
-//   padding: 2px 5px;
-// }
-
-// #user-label {
-//   position: absolute;
-//   top: 30px;
-//   left: -13px;
-// }
-
-// #computer-label {
-//   position: absolute;
-//   top: 30px;
-//   right: -35px;
-// }
 
 .userChoices {
   text-align: center;
@@ -83,7 +52,7 @@ header {
   display: inline-block;
   margin: 10px;
   padding: 15px;
-  font-size: 50px;
+  font-size: 30px;
   color: $coral;
   border: 4px solid $coral;
   border-radius: 50%;
@@ -95,14 +64,14 @@ header {
 
 .computerChoices {
   text-align: center;
-  padding: 10px;
+  padding-top: 10px;
 }
 
 .computerChoice {
   text-align: center;
   display: inline-block;
   padding: 15px;
-  font-size: 50px;
+  font-size: 30px;
   color: $coral;
   border: 4px solid $coral;
   border-radius: 10px;
@@ -114,9 +83,12 @@ header {
 
 .action-message {
   color: $brightBlue;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 10px;
+}
+
+#awareChoice {
+  margin-top: 10px;
 }
 
 .result {
@@ -124,7 +96,7 @@ header {
   background-color: $brightBlue;
   text-align: center;
   color: $brightBlue;
-  font-size: 30px;
+  font-size: 25px;
   p {
     color: $light;
     padding: 10px;

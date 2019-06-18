@@ -8,27 +8,19 @@ var choices = ["rock", "paper", "scissors"];
 var randomNumber = Math.floor(Math.random() * choices.length);
 var computerChoice = choices[randomNumber];
 
-// Speelknop
-var play = document.getElementById("play");
 // Winnaarsboodschap
 var winner = document.getElementById("winner");
+var randomChoice = document.getElementById("randomChoice");
+var awareChoice = document.getElementById("awareChoice");
 
 // Gebruiker kiest steen door klik
 
 rock.addEventListener("click", playRock);
 
 function playRock() {
-  var userChoice = "rock";
+  userChoice = "rock";
+  awareChoice.innerHTML = "You're a rock";
   console.log(userChoice);
-  console.log(computerChoice);
-  if (computerChoice === "rock") {
-    winner.innerHTML = "Both of you are solid as a rock, no winners here.";
-  } else if (computerChoice === "paper") {
-    winner.innerHTML = "Computer's paper covers your rock, you lo-ho-se-her.";
-  } else {
-    winner.innerHTML =
-      "You broke the computer's scissors. </br> Taste the back of your hand. That's what winner tastes like.";
-  }
 }
 
 // Gebruiker kiest papier door klik
@@ -36,17 +28,9 @@ function playRock() {
 paper.addEventListener("click", playPaper);
 
 function playPaper() {
-  var userChoice = "paper";
+  userChoice = "paper";
+  awareChoice.innerHTML = "You're paper";
   console.log(userChoice);
-  console.log(computerChoice);
-  if (computerChoice === "rock") {
-    winner.innerHTML = "Your paper kicks the computer's rock ass, you winner!";
-  } else if (computerChoice === "paper") {
-    winner.innerHTML = "Two papers, two losers.";
-  } else {
-    winner.innerHTML =
-      "You just got cut in half by the computer's scissors. You little wus.";
-  }
 }
 
 // Gebruiker kiest schaar door klik
@@ -54,15 +38,68 @@ function playPaper() {
 scissors.addEventListener("click", playScissors);
 
 function playScissors() {
-  var userChoice = "scissors";
+  userChoice = "scissors";
+  awareChoice.innerHTML = "You're scissors";
   console.log(userChoice);
-  console.log(computerChoice);
+}
+
+// Computer playt
+
+play.addEventListener("click", playPlay);
+
+function playPlay() {
+  if (userChoice === "rock") {
+    //Gebruiker koos steen in stap 1
+    console.log(computerChoice);
+    messageRock();
+  } else if (userChoice === "paper") {
+    //Gebruiker koos papier in stap 1
+    console.log(computerChoice);
+    messagePaper();
+  } else {
+    console.log(computerChoice);
+    messageScissors(); //Gebruiker koos schaar in stap 1
+  }
+}
+
+function messageRock() {
   if (computerChoice === "rock") {
-    winner.innerHTML = "Computer's rock solid, you just got crushed my friend.";
+    winner.innerHTML = "Both of us rock, but no winners here.";
+    randomChoice.innerHTML = "I'm a rock";
   } else if (computerChoice === "paper") {
-    winner.innerHTML = "You cut up the computer's paper, you gangsta.";
+    winner.innerHTML = "I gave you a papercut and you started crying so I win";
+    randomChoice.innerHTML = "I am paper";
   } else {
     winner.innerHTML =
-      "Scissor scissor on the wall, who is the biggest loser of them all? You both are because you both picked scissors.";
+      "Taste the back of your hand. That's what winner tastes like bro.";
+    randomChoice.innerHTML = "I am scissors";
+  }
+}
+
+function messagePaper() {
+  if (computerChoice === "rock") {
+    winner.innerHTML = "Your paper kicks my rock ass, you winner!";
+    randomChoice.innerHTML = "Call me the rock.";
+  } else if (computerChoice === "paper") {
+    winner.innerHTML = "Two papers, two losers.";
+    randomChoice.innerHTML = "I'm paper";
+  } else {
+    winner.innerHTML =
+      "You just got cut in half by my scissors. You little wus.";
+    randomChoice.innerHTML = "I choose scissors";
+  }
+}
+
+function messageScissors() {
+  if (computerChoice === "rock") {
+    winner.innerHTML = "I am rock solid, you just got crushed my friend.";
+    randomChoice.innerHTML = "I am rock";
+  } else if (computerChoice === "paper") {
+    winner.innerHTML = "You cut up my paper, you lil gangsta.";
+    randomChoice.innerHTML = "I am paper";
+  } else {
+    winner.innerHTML =
+      "Scissor scissor on the wall, who is the biggest loser of them all? We both are.";
+    randomChoice.innerHTML = "I am scissors";
   }
 }
